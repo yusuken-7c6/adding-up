@@ -41,8 +41,11 @@ rl.on("close", () => {
     return p2[1].change - p1[1].change;
   });
 
-  const rankingStrings = rankingArray.map(([key, value]) => {
+  const rankingStrings = rankingArray.map(([key, value], index) => {
     return (
+      index +
+      1 +
+      "位: " +
       key +
       ": " +
       value.popu10 +
